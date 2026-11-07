@@ -1,6 +1,10 @@
 name: wfval
 description: Generate workflow-friendly string values from paths and URLs.
 
+branding:
+  icon: terminal
+  color: purple
+
 inputs:
   commands:
     description: >-
