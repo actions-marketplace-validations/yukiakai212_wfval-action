@@ -1,0 +1,20 @@
+name: wfval
+description: Generate workflow-friendly string values from paths and URLs.
+
+inputs:
+  commands:
+    description: >-
+      One wfval command per line. Commands are parsed as arguments, not executed
+      through a shell. Every command must include --name <output-name>.
+    required: true
+
+  working-directory:
+    description: >-
+      Working directory for all commands. Relative paths are resolved from
+      GITHUB_WORKSPACE.
+    required: false
+    default: .
+
+runs:
+  using: node24
+  main: dist/action.cjs

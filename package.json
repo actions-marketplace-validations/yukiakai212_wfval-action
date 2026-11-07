@@ -1,0 +1,55 @@
+{
+  "name": "@wfval/action",
+  "version": "1.0.2",
+  "description": "Generate workflow-friendly string values from paths and URLs.",
+  "type": "module",
+  "main": "./dist/cli.cjs",
+  "types": "./dist/cli.d.ts",
+  "bin": {
+    "wfval": "./dist/cli.cjs"
+  },
+  "scripts": {
+    "test": "echo npx vitest run --reporter verbose --coverage --config ../../vitest.config.ts",
+    "build": "npx tsup",
+    "build:public": "npx tsup --config tsup.public.config.ts",
+    "prepare:artifact": "tsx workspace/release/prepareArtifact.ts",
+    "prepare": "is-ci || husky"
+  },
+  "files": [
+    "dist/*",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "cli",
+    "workflow",
+    "github-actions",
+    "url",
+    "path"
+  ],
+  "author": "Yuki_akai",
+  "homepage": "https://github.com/yukiakai212/wfval-action",
+  "funding": "https://github.com/sponsors/yukiakai212",
+  "engines": {
+    "node": ">= 16"
+  },
+  "maintainers": [
+    {
+      "name": "Yuki_akai",
+      "homepage": "https://github.com/yukiakai212"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yukiakai212/wfval-action.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yukiakai212/wfval-action/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^3.0.1",
+    "@wfval/cli": "*",
+    "execa": "^9.6.1",
+    "string-argv": "^0.4.0"
+  }
+}
