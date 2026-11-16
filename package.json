@@ -1,6 +1,6 @@
 {
   "name": "@wfval/action",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "Generate workflow-friendly string values from paths and URLs.",
   "type": "module",
   "main": "./dist/cli.cjs",
@@ -51,6 +51,7 @@
     "@wfval/cli": "*",
     "@yukiakai/path-extra": "^1.0.1",
     "execa": "^9.6.1",
-    "string-argv": "^0.4.0"
+    "string-argv": "^0.4.0",
+    "zod": "^4.6.7"
   }
 }
